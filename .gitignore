@@ -1,0 +1,16 @@
+.sass-cache
+node_modules
+npm-debug.log
+Gemfile.lock
+
+dist
+/*.html
+
+!.gitkeep
+.db_thumb
+.DS_Store
+._*
+
+*_local.*
+
+package-lock.json

@@ -1,0 +1,36 @@
+a{
+	display: block;
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: none !important;
+	}
+}
+
+/*Other styles*/
+
+*{
+	outline: none !important;
+}
+
+ul, li{
+	list-style: none;
+	padding: 0;
+}
+
+/*END: Other styles*/
+
+.caps{
+	text-transform: uppercase;
+}
+
+textarea{
+	resize: none;
+}
+
+/*Remove the following styles after adding reset.css file*/
+body{
+	margin: 0;
+	//background: $lighter-gray !important;
+}
+/*END: Remove the following styles after adding reset.css file*/
