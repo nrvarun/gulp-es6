@@ -1,18 +1,17 @@
-# ![Factor]
+# Boilerplate
 
 ## Boilerplate for frontend development
 _SA--PU--ES = Sass + Pug + ES6 & automation_
 
 The purpose of the SAPUES is to provide a consistent file structure with a normalized code and a collection of helpers and resets (soon).
- It wraps [ITCSS](http://itcss.io/) principles.
-
+ 
 # Features
 
 ## Pug as templating system
 - Layouts and partials to power static websites
 
 ## Sass structure
-- It follows [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4) concepts
+- It follows SMACSS
 - A simple font sizing : 1.6em = 16px
 - A collection of variables to manage default sizing, fonts and colors
 
