@@ -25,10 +25,10 @@ import filter         from 'gulp-filter'
 import changed        from 'gulp-changed'
 import imagemin       from 'gulp-imagemin'
 import clean          from 'gulp-rimraf'
-
-import merge from 'merge-stream'
-import glob  from 'glob'
-import path from 'path'
+import purify         from 'gulp-purifycss'
+import merge          from 'merge-stream'
+import glob           from 'glob'
+import path           from 'path'
 
 
 browserSync.create()
@@ -41,6 +41,7 @@ const dirs = {
 const paths = {
   css: {
     source:     `${dirs.src}/css/*.scss`,
+    watch:     `${dirs.src}/css/**/*.scss`,
     dest  :     `${dirs.dest}/css/`,
   },
   js: {
@@ -76,6 +77,7 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(postcss([autoprefixer({browsers: ['last 10 version']})]))
+    .pipe(purify(['./src/js/**/*.js', './dist/*.html']))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.css.dest))
@@ -100,28 +102,6 @@ gulp.task('pug', () => {
     .pipe(gulp.dest(paths.pug.dest))
     .pipe(browserSync.stream())
 })
-
-// // ES6
-// gulp.task('js', () => {
-//   browserify(paths.js.source)
-//     .transform(babelify.configure({ presets: [es2015] }))
-//     .on('error', notify.onError({
-//         message: "<%= error.message %>",
-//         title: "Babelify JS"
-//       }))
-//     .bundle()
-//     .on('error', notify.onError({
-//         message: "<%= error.message %>",
-//         title: "JS compilation"
-//       }))
-//     .pipe(source('main.js'))
-//     .pipe(buffer())
-//     .pipe(sourcemaps.init({loadMaps: true}))
-//     .pipe(uglify())
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest(paths.js.dest))
-//     .pipe(browserSync.stream())
-// })
 
 //ES6 Bundles generator
 gulp.task("bundle-js", function () {
@@ -187,7 +167,7 @@ gulp.task('serve', () => {
         open: true,
     })
 
-    gulp.watch(paths.css.source, ['sass'])
+    gulp.watch(paths.css.watch, ['sass'])
     gulp.watch(paths.js.source, ['bundle-js'])
     gulp.watch(paths.pug.source, ['pug'])
     //gulp.watch(paths.images.source, browserSync.reload)
