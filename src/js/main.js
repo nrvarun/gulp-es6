@@ -2,3 +2,4 @@
 
 // Website wide scripts
 
+import './components/hello.js';
