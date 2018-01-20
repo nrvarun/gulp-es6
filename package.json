@@ -1,5 +1,18 @@
 {
+  "name": "gulp-es6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nrvarun/gulp-es6",
+  "author": "Varun",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "serve": "gulp"
+  },
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
     "gulp-rimraf": "^0.2.1",
     "rimraf": "^2.6.2"
   },
