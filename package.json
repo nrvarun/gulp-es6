@@ -13,8 +13,7 @@
     "jquery": "./src/js/plugins/jquery.min.js"
   },
   "browserify-shim": {
-    "jquery": "$",
-    "jQuery": "$"
+    "jquery": "$"
   },
   "browserify": {
     "transform": [ "browserify-shim" ]

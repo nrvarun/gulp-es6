@@ -77,6 +77,22 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(postcss([autoprefixer({browsers: ['last 10 version']})]))
+    .pipe(minifyCSS())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.css.dest))
+    .pipe(browserSync.stream({match: '**/*.css'}))
+})
+
+// SASS
+gulp.task('prod-sass', () => {
+  return gulp.src(paths.css.source)
+    .pipe(plumber({errorHandler: notify.onError({
+        message: "<%= error.message %>",
+        title: "CSS preprocessing"
+      })}))
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(postcss([autoprefixer({browsers: ['last 10 version']})]))
     .pipe(purify(['./src/js/**/*.js', './dist/*.html']))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
@@ -176,3 +192,4 @@ gulp.task('serve', () => {
 // TASKS
 gulp.task('default', [ 'build', 'serve' ])
 gulp.task('build', [ 'pug', 'sass', 'bundle-js', 'images', 'fonts', 'js-vendor' ])
+gulp.task('prod', [ 'pug', 'prod-sass', 'bundle-js', 'images', 'fonts', 'js-vendor' ])
