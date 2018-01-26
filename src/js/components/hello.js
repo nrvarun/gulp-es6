@@ -1,5 +1,6 @@
+'use strict';
 
-global.jQuery = require("jquery");
+// require('jquery');
 
 $(document).ready(()=> {
   console.log('Hello');
@@ -20,11 +21,11 @@ $(document).ready(()=> {
     // newListItem.classList.add('m-3')
 
     if(i == 0 || i == 1){
-      $('ul').append(`<li class="mr-3">Hello ${i} time</li>`);
+      $('.hello-list').append(`<li class="mr-3">Hello ${i} time</li>`);
     }
     else {
       // newListItem.innerHTML = `Hello ${i} times`;
-      $('ul').append(`<li class="mr-3">Hello ${i} times</li>`);
+      $('.hello-list').append(`<li class="mr-3">Hello ${i} times</li>`);
     }
 
     // list.appendChild(newListItem);

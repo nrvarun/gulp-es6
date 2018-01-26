@@ -9,14 +9,12 @@
   "scripts": {
     "serve": "gulp"
   },
-  "browser": {
-    "jquery": "./src/js/plugins/jquery.min.js"
-  },
-  "browserify-shim": {
-    "jquery": "$"
-  },
   "browserify": {
     "transform": [ "browserify-shim" ]
+  },
+  "browserify-shim": {
+    "jquery": "./src/js/plugins/jquery.min.js",
+    "aos": "global:AOS"
   },
   "dependencies": {
     "babel": "^6.23.0",

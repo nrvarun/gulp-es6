@@ -1,13 +1,16 @@
 doctype html
 html
-    include ./pug/base/head.pug
-    include ./pug/base/header.pug
-    body
+		include ./pug/base/head.pug
+		include ./pug/base/header.pug
+		body
+			main
 
-        main
+					h2(data-aos="fade") Home Page
 
-            h2 Home Page
+					form(data-parsley-validate)
+						input#date(type="text", name="date" data-parsley-trigger="blur" data-parsley-required data-parsley-error-message=" Type some value bugger")
+						input(type="submit")
 
-            ul.hello-list.d-flex.flex-wrap
+					ul.hello-list.d-flex.flex-wrap
 
-    script(src="js/main.js")
+			include ./pug/base/scripts.pug
