@@ -21,11 +21,11 @@ $(document).ready(()=> {
     // newListItem.classList.add('m-3')
 
     if(i == 0 || i == 1){
-      $('.hello-list').append(`<li class="mr-3">Hello ${i} time</li>`);
+      $('.home-list').append(`<li class="mr-3">Hello ${i} time</li>`);
     }
     else {
       // newListItem.innerHTML = `Hello ${i} times`;
-      $('.hello-list').append(`<li class="mr-3">Hello ${i} times</li>`);
+      $('.home-list').append(`<li class="mr-3">Hello ${i} times</li>`);
     }
 
     // list.appendChild(newListItem);
