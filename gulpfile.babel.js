@@ -53,6 +53,7 @@ const paths = {
   pug: {
     source:     [`${dirs.src}/**/*.pug`],
     dest  :     `${dirs.dest}/`,
+    watch:     `${dirs.src}/pug/**/*.pug`,
   },
     images: {
       source:     `${dirs.src}/img/**/*.{png,jpg,jpeg,gif,svg}`,
@@ -83,22 +84,24 @@ gulp.task('sass', () => {
     .pipe(browserSync.stream({match: '**/*.css'}))
 })
 
-// SASS
-gulp.task('prod-sass', () => {
-  return gulp.src(paths.css.source)
-    .pipe(plumber({errorHandler: notify.onError({
-        message: "<%= error.message %>",
-        title: "CSS preprocessing"
-      })}))
-    .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(postcss([autoprefixer({browsers: ['last 10 version']})]))
-    .pipe(purify(['./src/js/**/*.js', './dist/*.html']))
-    .pipe(minifyCSS())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.css.dest))
-    .pipe(browserSync.stream({match: '**/*.css'}))
-})
+// // SASS
+// gulp.task('prod-sass', () => {
+//   return gulp.src(paths.css.source)
+//     .pipe(plumber({errorHandler: notify.onError({
+//         message: "<%= error.message %>",
+//         title: "CSS preprocessing"
+//       })}))
+//     .pipe(sourcemaps.init())
+//     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+//     .pipe(postcss([autoprefixer({browsers: ['last 10 version']})]))
+//     .pipe(purify(content, css, options, function (purifiedAndMinifiedResult) {
+//       console.log(purifiedAndMinifiedResult);
+//     }))
+//     .pipe(minifyCSS())
+//     .pipe(sourcemaps.write('.'))
+//     .pipe(gulp.dest(paths.css.dest))
+//     .pipe(browserSync.stream({match: '**/*.css'}))
+// })
 
 // PUG
 gulp.task('pug', () => {
@@ -178,18 +181,17 @@ gulp.task('serve', () => {
 
     browserSync.init({
         server: {
-          baseDir: "dist",
+          baseDir: "./dist",
         },
         open: true,
     })
 
     gulp.watch(paths.css.watch, ['sass'])
     gulp.watch(paths.js.source, ['bundle-js'])
-    gulp.watch(paths.pug.source, ['pug'])
+    gulp.watch(paths.pug.watch, ['pug'])
     //gulp.watch(paths.images.source, browserSync.reload)
 })
 
 // TASKS
 gulp.task('default', [ 'build', 'serve' ])
 gulp.task('build', [ 'pug', 'sass', 'bundle-js', 'images', 'fonts', 'js-vendor' ])
-gulp.task('prod', [ 'pug', 'prod-sass', 'bundle-js', 'images', 'fonts', 'js-vendor' ])
