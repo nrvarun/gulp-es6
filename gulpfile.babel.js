@@ -68,6 +68,10 @@ gulp.task('clean', [], function() {
   return gulp.src("dist/*", { read: false }).pipe(clean());
 });
 
+var plugins = [
+  autoprefixer({browsers: ['last 10 version']})
+];
+
 // SASS
 gulp.task('sass', () => {
   return gulp.src(paths.css.source)
@@ -77,7 +81,7 @@ gulp.task('sass', () => {
       })}))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(postcss([autoprefixer({browsers: ['last 10 version']})]))
+    .pipe(postcss(plugins))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.css.dest))

@@ -10,7 +10,9 @@
     "serve": "gulp"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
     "jquery": "./src/js/plugins/jquery.min.js",
@@ -22,7 +24,9 @@
     "babel-core": "^6.26.0",
     "browserify-shim": "^3.8.14",
     "gulp-rimraf": "^0.2.1",
-    "rimraf": "^2.6.2"
+    "postcss-uncss": "^0.16.1",
+    "rimraf": "^2.6.2",
+    "uncss": "^0.16.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
