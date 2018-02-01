@@ -53,7 +53,7 @@ const paths = {
   pug: {
     source:     [`${dirs.src}/**/*.pug`],
     dest  :     `${dirs.dest}/`,
-    watch:     `${dirs.src}/pug/**/*.pug`,
+    watch:     [`${dirs.src}/pug/**/*.pug`, `${dirs.src}/*.pug`],
   },
     images: {
       source:     `${dirs.src}/img/**/*.{png,jpg,jpeg,gif,svg}`,
@@ -188,6 +188,7 @@ gulp.task('serve', () => {
           baseDir: "./dist",
         },
         open: true,
+        port: 8000
     })
 
     gulp.watch(paths.css.watch, ['sass'])
