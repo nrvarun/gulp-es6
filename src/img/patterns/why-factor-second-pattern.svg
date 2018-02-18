@@ -1,0 +1,33 @@
+<svg class="why-factor-second-pattern" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="485" height="440" viewBox="0 0 485 440">
+    <defs>
+        <path class="pattern-big-circle" id="gd3ha" d="M1358.28 2223.63c68.09 0 123.28 54.92 123.28 122.68S1426.36 2469 1358.28 2469c-68.09 0-123.28-54.93-123.28-122.69 0-67.76 55.2-122.68 123.28-122.68z"/>
+        <path class="pattern-big-rect" id="gd3hb" d="M1351.44 2096.26l128.33 62.79c30.33 14.84 42.83 51.34 27.9 81.52l-50.16 101.4c-14.92 30.18-51.62 42.6-81.96 27.76l-128.32-62.79c-30.34-14.84-42.83-51.34-27.9-81.51l50.15-101.41c14.93-30.18 51.62-42.6 81.96-27.76z"/>
+        <path class="pattern-circle" id="gd3he" d="M1239 2033a10 10 0 1 1 0 20 10 10 0 0 1 0-20z"/>
+        <path class="pattern-circle" id="gd3hf" d="M1073.5 2273a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17z"/>
+        <path class="pattern-circle" id="gd3hg" d="M1046.5 2085a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z"/>
+        <linearGradient id="gd3hc" x1="1363.98" x2="1363.02" y1="2376" y2="2089.99" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#0073ff"/>
+            <stop offset="1" stop-color="#07a8f7"/>
+        </linearGradient>
+        <clipPath id="gd3hd">
+            <use fill="#fff" xlink:href="#gd3ha"/>
+        </clipPath>
+    </defs>
+    <g>
+        <g opacity=".1" transform="translate(-1039 -2031)">
+            <use fill="url(#gd3hc)" xlink:href="#gd3hb"/>
+        </g>
+        <g opacity=".04" transform="translate(-1039 -2031)">
+            <use fill="#fff" fill-opacity="0" stroke="#07a8f7" stroke-miterlimit="50" stroke-width="60" clip-path="url(&quot;#gd3hd&quot;)" xlink:href="#gd3ha"/>
+        </g>
+        <g opacity=".2" transform="translate(-1039 -2031)">
+            <use fill="#068ff6" xlink:href="#gd3he"/>
+        </g>
+        <g opacity=".04" transform="translate(-1039 -2031)">
+            <use fill="#068ff6" xlink:href="#gd3hf"/>
+        </g>
+        <g opacity=".1" transform="translate(-1039 -2031)">
+            <use fill="#068ff6" xlink:href="#gd3hg"/>
+        </g>
+    </g>
+</svg>

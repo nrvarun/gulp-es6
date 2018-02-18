@@ -1,0 +1,13 @@
+<svg class="why-factor-last-pattern" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="305" height="303" viewBox="0 0 305 303">
+    <defs>
+        <path class="pattern-big-circle" id="r2yya" d="M-13 2539c83.4 0 151 67.38 151 150.5S70.4 2840-13 2840s-151-67.38-151-150.5S-96.4 2539-13 2539z"/>
+        <clipPath id="r2yyb">
+            <use fill="#fff" xlink:href="#r2yya"/>
+        </clipPath>
+    </defs>
+    <g>
+        <g opacity=".04" transform="translate(165 -2538)">
+            <use fill="#fff" fill-opacity="0" stroke="#07a8f7" stroke-miterlimit="50" stroke-width="60" clip-path="url(&quot;#r2yyb&quot;)" xlink:href="#r2yya"/>
+        </g>
+    </g>
+</svg>

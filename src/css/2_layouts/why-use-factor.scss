@@ -1,0 +1,144 @@
+.why-use-factor {
+  margin: 60px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $screen-md) {
+    margin: 140px auto 60px auto; 
+  }
+
+  @media (min-width: $screen-lg) {
+    max-width: 950px;
+    margin-top: 160px;
+  }
+
+  &__desc {
+    font-family: $proxima-regular;
+    font-size: 12px;
+    text-align: center;
+    line-height: 27px;
+    color: #8d8f9b;
+    margin: 30px 0 40px 0;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        margin-top: 80px;
+    }
+
+    span {
+      color: #4d4e5b;
+      font-family: $proxima-semibold;
+      margin-right: 5px;
+    }
+
+    @media (min-width: $screen-sm) {
+      font-size: 14px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+    }
+  }
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @media screen and (-ms-high-contrast: active) and (-ms-high-contrast: none) {
+      display: block;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__img {
+    width: 150px;
+    height: auto;
+    margin: 30px auto 40px auto;
+    display: block;
+
+    @media (min-width: $screen-sm) {
+      width: 200px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 250px;
+    }
+    @media (min-width: $screen-lg) {
+      width: 320px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 15px 10px 30px 10px;
+  }
+
+  &__list-title {
+    font-family: $proxima-semibold;
+    font-size: 18px;
+    color: #4d4e5b;
+    margin-bottom: 0;
+    position: relative;
+
+    &::before {
+      content:  '';
+      background: url('../img/title-logo.svg') no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -8px;
+      left: -14px;
+      height: 20px;
+      width: 20px;
+      opacity: 0.2;
+    }
+
+    @media (min-width: $screen-sm) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 22px;
+    }
+  }
+
+  &__list-detail {
+    font-family: $proxima-regular;
+    font-size: 12px;
+    color: #8d8f9b;
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      background-color: lighten($color: #0469bb, $amount: 30%);
+      border-radius: 50%;
+      // background: url('./img/why-use-list-dot.png') no-repeat;
+    }
+
+    @media (min-width: $screen-sm) {
+      font-size: 14px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+    }
+  }
+}
+
+#why-use-factor-anim1 {
+  height: 200px;
+  width: 200px;
+}

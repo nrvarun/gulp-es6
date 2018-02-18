@@ -1,0 +1,29 @@
+
+@import 'base-styles';
+
+// Font Files
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url('../fonts/ProximaNova-Light/ProximaNova-Light.eot');
+  src: url('../fonts/ProximaNova-Light/ProximaNova-Light.woff') format('woff'),
+       url('../fonts/ProximaNova-Light/ProximaNova-Light.eot?#iefix') format('embedded-opentype');
+      //  url('../fonts/ProximaNova-Light/ProximaNova-Light.woff') format('woff'),
+      //  url('../fonts/ProximaNova-Light/ProximaNova-Light.svg#ProximaNovaCond-Regular') format('svg'),
+}
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot');
+  src: url('../fonts/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
+       url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
+      //  url('../fonts/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
+      //  url('../fonts/ProximaNova-Regular/ProximaNova-Regular.svg#ProximaNovaCond-Regular') format('svg'),
+}
+
+@font-face {
+  font-family: 'ProximaNova-Semibold';
+  src: url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot');
+  src: url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff') format('woff'),
+       url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype');
+      //  url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff') format('woff'),
+      //  url('../fonts/ProximaNova-Semibold/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg'),
+}

@@ -1,0 +1,81 @@
+.pattern-wrapper {
+    position: relative;
+    display: none;
+    pointer-events: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  .factor-list-patterns {
+    position: absolute;
+    pointer-events: none;
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .why-factor-second-pattern {
+    position: absolute;
+    pointer-events: none;
+    right: -141px;
+    bottom: 312px;
+    height: 400px;
+    width: 320px;
+
+    @media (min-width: 1200px) {
+      height: 600px;
+      width: 410px;
+      bottom: 230px;
+      right: -170px;
+    }
+    @media (min-width: 1440px) {
+      height: 800px;
+      width: 500px;
+      bottom: 115px;
+      right: -210px;
+    }
+  }
+
+  .why-factor-last-pattern {
+    position: absolute;
+    pointer-events: none;
+    left: -120px;
+    bottom: -59px;
+    height: 278px;
+    width: 300px;
+
+    @media (min-width: 1200px) {
+      height: 400px;
+      width: 350px;
+      bottom: -60px;
+      left: -180px;
+    }
+    @media (min-width: 1440px) {
+      width: 350px;
+      left: -160px;
+    }
+  }
+
+  .features-pattern-svg2 {
+    position: absolute;
+    pointer-events: none;
+    height: 300px;
+    left: -180px;
+    width: 300px;
+    bottom: -64px;
+
+    @media (min-width: 1200px) {
+      height: 400px;
+      bottom: -38px;
+      left: -200px;
+    }
+    @media (min-width: 1440px) {
+        width: 415px;
+        left: -231px;
+        bottom: -114px;
+        height: 550px;
+    }
+  }

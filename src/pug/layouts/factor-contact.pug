@@ -1,0 +1,80 @@
+section.factor-contact
+    .container
+        .factor-contact__form-wrapper(data-aos="fade" data-aos-delay="0")
+            .row
+                .col-sm-12
+                    h2.factor-contact__form-title request a demo
+            form.row.factor-contact__form#contact-form(action="" data-parsley-validate)
+                .col-sm-6
+                    .input-field.input-block
+                        input.input-data.input__field(id="name" type="text" name="name" data-parsley-error-message="* Please enter your Name" data-parsley-required required)
+                        label.input__label(for="name")
+                            | Your Name
+                        span.focus-border
+                .col-sm-6
+                    .input-field.input-block
+                        input.input-data.input__field(id="email" type="text" name="email" data-parsley-type="email" data-parsley-error-message="* Please enter your address" data-parsley-required required)
+                        label.input__label(for="name")
+                            | email address
+                        span.focus-border
+                .col-sm-6
+                    .input-field.input-block
+                        input.input-data.input__field(id="phone" type="text" name="phone"  data-parsley-type="number" data-parsley-error-message="* Please enter your phone number" data-parsley-required required)
+                        label.input__label(for="phone")
+                            | phone
+                        span.focus-border
+                .col-sm-6
+                    .input-field.input-block
+                        input.input-data.input__field(id="company" type="text" name="company" data-parsley-error-message="* Please enter the company" data-parsley-required required)
+                        label.input__label(for="company")
+                            | company
+                        span.focus-border
+
+                .col-sm-10
+                    .input-field.input-block
+                        textarea.input-data.input__field(id="message" type="textarea" rows="2" name="message")
+                        label.input__label(for="message")
+                            | message
+                        span.focus-border
+                .col-sm-2
+                    .submit-wrapper
+                        input.factor-contact__submit-btn(type="submit" value="")
+
+        footer.factor-footer
+            .row
+                .col-sm-6
+                    .factor-footer__content-wrapper
+                        .factor-footer__copy-wrap
+                            img.factor-footer__logo(src="./img/footer-logo.png" alt="footer logo")
+                            p.factor-footer__copyright
+                                | © Factor Financial Pvt. Limited.
+                        ul.factor-footer__nav-list
+                            li.factor-footer__nav-list-item
+                                a.factor-footer__nav-link(href="javascript:void(0);")
+                                    | privacy
+                            li.factor-footer__nav-list-item
+                                a.factor-footer__nav-link(href="javascript:void(0);")
+                                    | terms
+                            li.factor-footer__nav-list-item
+                                a.factor-footer__nav-link(href="javascript:void(0);")
+                                    | contact
+                .col-sm-6
+                    .factor-footer__content-wrapper2
+                        ul.factor-footer__nav-list
+                                li.factor-footer__nav-list-item
+                                    a.factor-footer__nav-link(href="javascript:void(0);")
+                                        | google play
+                                li.factor-footer__nav-list-item
+                                    a.factor-footer__nav-link(href="javascript:void(0);")
+                                        | app store
+
+                        ul.factor-footer__nav-list.social
+                            li.factor-footer__nav-list-item
+                                    a.factor-footer__nav-link(href="javascript:void(0);")
+                                        img.factor-footer__nav-img(src="./img/twitter-bird-logo.png" alt="twitter")
+                            li.factor-footer__nav-list-item
+                                a.factor-footer__nav-link(href="javascript:void(0);")
+                                    img.factor-footer__nav-img(src="./img/fb-logo.png" alt="facebook")
+                            li.factor-footer__nav-list-item
+                                a.factor-footer__nav-link(href="javascript:void(0);")
+                                    img.factor-footer__nav-img(src="./img/instagram-logo.png" alt="instagram")

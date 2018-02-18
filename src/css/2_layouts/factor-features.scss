@@ -1,0 +1,127 @@
+.factor-features {
+  margin: 20px 0;
+
+  &.row {
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 60px;
+    }
+    @media (min-width: $screen-md) {
+      margin-bottom: 80px;
+    }
+    @media (min-width: $screen-lg) {
+      margin-bottom: 90px;
+    }
+    @media (min-width: $screen-xlg) {
+      margin-bottom: 110px;
+    }
+  }
+
+  &__screen-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__screen {
+    width: 100%;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    padding: 10px 20px;
+    // box-shadow: 0px 1px 20px 9px #eef3f6;
+
+    @media (min-width: $screen-sm) {
+      width: 350px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 400px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 500px;
+    }
+  }
+
+  &__content-wrapper {
+    &.first {
+      @media (min-width: $screen-sm) {
+        margin-left: 20px;
+      }
+    }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+  }
+
+  &__heading {
+    font-family: $proxima-semibold;
+    font-size: 18px;
+    text-align: left;
+    margin: 30px 0 20px 0;
+
+    @media (min-width: $screen-sm) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 22px;
+    }
+  }
+
+  &__list-detail {
+    font-family: $proxima-regular;
+    font-size: 14px;
+    color: #8d8f9b;
+    line-height: 25px;
+    width: 100%;  
+
+    span {
+      font-family: $proxima-semibold;
+      color: #4d4e5b;
+      margin-right: 5px;
+      text-transform: capitalize;
+    }
+
+    @media (min-width: $screen-sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    // @media (min-width: 700px) {
+    //   margin: 0 30px 0 0;
+    // }
+    // &.second {
+    //   @media (min-width: 700px) {
+    //     margin: 0 0 0 30px;
+    //   }
+    // }
+  }
+
+  &__list-item {
+    display: flex;
+  }
+
+  &__list-img {
+
+    height: 30px;
+    position: relative;
+    top: 5px;
+    max-width: 100%;
+    margin-bottom: 15px;
+    align-self: flex-start;
+    margin-right: 10px;
+
+    @media (min-width: $screen-sm) {
+      height: 40px;
+    }
+  }
+}

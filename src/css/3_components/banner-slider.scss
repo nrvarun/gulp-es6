@@ -1,0 +1,94 @@
+//Banner Slider
+
+.banner-slider {
+
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    height: 400px;
+    width: 160px;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+    @media (min-width: 414px) {
+        width: 200px;
+    }
+
+    @media (min-width: 475px) {
+        top: 10px;
+        width: 240px;
+    }
+
+    @media (min-width: $screen-sm) {
+        top: 14px;
+        width: 310px;
+    }
+
+    @media (min-width: 899px) {
+        top: 16px;
+        width: 360px;
+    }
+
+    @media (min-width: $screen-lg) {
+        top: 19px;
+        width: 420px;
+    }
+
+    @media (min-width: 1440px) {
+        top: 22px;
+        width: 550px;
+    }
+
+    &__laptop {
+        width: 240px;
+        pointer-events: none;
+
+        @media (min-width: 414px) {
+            width: 280px;
+        }
+
+        @media (min-width: 475px) {
+            width: 340px;
+        }
+
+        @media (min-width: $screen-sm) {
+            width: 450px;
+        }
+
+        @media (min-width: $screen-sm) {
+            width: 450px;
+        }
+
+        @media (min-width: 899px) {
+            width: 500px;
+        }
+
+        @media (min-width: $screen-lg) {
+            width: 600px;
+        }
+
+        @media (min-width: 1440px) {
+            width: 780px;
+        }
+
+      }
+
+    &-wrapper {
+        position: relative;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__slide-img {
+        width: 100%;
+        height: auto;
+    }
+}

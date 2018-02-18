@@ -1,0 +1,112 @@
+.factor-contact {
+    min-height: 300px;
+    position: relative;
+    margin-top: 60px;
+    // background: url('../img/footer-bgimg.svg') no-repeat;
+    // background-size: cover;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 150px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #0073ff;
+        transition: all 0.5s ease;
+        pointer-events: none;
+        transform: skew(0, 5deg);
+        transform-origin: left top;
+        box-shadow: -15px -8px 40px 0px #dcdcdc;
+        background-image: linear-gradient(61deg, #0073ff 0%, #07a8f7 100%);
+
+        @media (min-width: 3000px) {
+            transform: skew(0, 3deg);
+        }
+
+    }
+
+    &__form-wrapper {
+        position: relative;
+        z-index: 999;
+        background-color: $white;
+        padding: 30px;
+        margin-bottom: 30px;
+        transform: translateY(10px);
+        box-shadow: 0 0 50px 0 rgba(0,0,0,0.1);
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+
+        @media (min-width: $screen-sm) {
+            padding: 60px 60px 40px 60px;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: $screen-md) {
+            max-width: 750px;
+            padding: 50px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: $screen-lg) {
+            max-width: 800px;
+            padding: 80px 120px;
+            margin-bottom: 70px;
+        }
+
+    }
+
+    &__form-title {
+        font-family: $proxima-semibold;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        letter-spacing: 0.3px;
+
+        @media (min-width: $screen-sm) {
+            font-size: 20px;
+        }
+        @media (min-width: $screen-md) {
+            font-size: 22px;
+        }
+    }
+
+    &__submit-btn {
+        background-color: $primary-color;
+        color: $primary-color;
+        border-radius: 50%;
+        padding: 10px;
+        outline: none;
+        height: 50px;
+        width: 50px;
+        margin: 0 auto;
+        border: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: relative;
+        background: url('../img/submit-btn-bgimg.png') no-repeat $primary-color;
+        background-position: center;
+        background-size: 20px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        transform: scale(1);
+        box-shadow: 0 0 7px 0 transparent;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 7px 0 #dcdcdc;
+        }
+
+    }
+    .submit-wrapper {
+        text-align: center;
+    }
+}

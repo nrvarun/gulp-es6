@@ -1,0 +1,139 @@
+input[type="text"],
+input[type="email"],
+input[type="textarea"],
+input[type="number"]{
+    font-family: $proxima-regular;
+    font-size: 14px;
+    color: #4d4e5b;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.input-field{
+    position: relative;
+}
+
+input:focus {
+    outline: none;
+}
+.input-data {
+    position: relative;
+    z-index: 2;
+    border: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #f4f4ff;
+    background-color: transparent;
+    width: 100%;
+    font-family: $proxima-regular;
+    color: #4d4e5b;
+	& ~ label {
+	    position: absolute;
+	    top: 0px;
+        left: 0px;
+        font-family: $proxima-regular;
+        font-weight: 600;
+	    color: rgba(77, 78, 91, 0.5);
+        font-size: 12px;
+	    transition: 0.3s;
+	    z-index: 1;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+	}
+
+}
+.input-data:focus ~ label, .has-content.input-data ~ label {
+    top: -16px;
+    font-size: 12px;
+    color: $primary-color;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    outline: none;
+}
+.input-data:focus ~ label {
+    top: -16px;
+    font-size: 12px;
+    color: $primary-color;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    outline: none;
+}
+
+.input-data:focus.parsley-error ~ label {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.has-content.input-data ~ label {
+    color: rgba(77, 78, 91, 0.5);
+}
+
+.input-data:focus ~ .focus-border {
+    width: 100%;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    left: 0px;
+}
+
+.has-content.input-data ~ .focus-border {
+    height: 1px;
+    background-color: #f4f4ff;
+}
+
+.input-data.parsley-error:focus ~ .focus-border {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+textarea.input-data {
+    resize: none;
+}
+textarea.input-data:focus ~ .focus-border,
+textarea.input-data ~ .focus-border {
+    top: 62px;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        top: 49px;
+    }
+}
+@-moz-document url-prefix() {
+    textarea.input-data:focus ~ .focus-border, textarea.input-data ~ .focus-border {
+        top:79px;
+    }
+ }
+
+.input-block{
+	margin: 0 0 40px 0;
+	@media (min-width: $screen-sm) {
+		margin-bottom: 30px;
+	}
+}
+
+.focus-border {
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: $primary-color;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        top: 31px;
+    }
+    @media (min-width: 1025px) {
+        top: 38px;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            top: 31px;
+        }
+    }
+}
+
+.parsley-custom-error-message {
+    color: rgba(255, 0, 0, 0.5);
+    font-family: $proxima-regular;
+    font-size: 10px;
+    margin-top: 5px;
+}

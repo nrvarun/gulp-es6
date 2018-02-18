@@ -1,0 +1,18 @@
+<svg class="factor-list-patterns" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1100" height="252" viewBox="0 0 1100 252">
+    <defs>
+        <path class="pattern-circle" id="j4xna" d="M1115.5 1064a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/>
+        <path id="j4xnb" d="M30.53 1212.02a10 10 0 1 1 2.47-19.85 10 10 0 0 1-2.47 19.85z"/>
+        <path class="pattern-circle" id="j4xnc" d="M66.49 981.38a8.5 8.5 0 1 1 2.1-16.88 8.5 8.5 0 0 1-2.1 16.88z"/>
+    </defs>
+    <g>
+        <g opacity=".4" transform="translate(-20 -962)">
+            <use fill="#068ff6" xlink:href="#j4xna"/>
+        </g>
+        <g opacity=".07" transform="translate(-20 -962)">
+            <use fill="#068ff6" xlink:href="#j4xnb"/>
+        </g>
+        <g opacity=".08" transform="translate(-20 -962)">
+            <use fill="#068ff6" xlink:href="#j4xnc"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,54 @@
+<svg class="features-pattern-svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="130" viewBox="0 0 172 130">
+    <defs>
+        <path id="7a5ma" d="M1168.5 4652a20.5 20.5 0 1 1 0 41 20.5 20.5 0 0 1 0-41z"/>
+        <path id="7a5mb" d="M1168.5 4642a30.5 30.5 0 1 1 0 61 30.5 30.5 0 0 1 0-61z"/>
+        <path id="7a5mc" d="M1168.5 4662a10.5 10.5 0 1 1 0 21 10.5 10.5 0 0 1 0-21z"/>
+        <path id="7a5mh" d="M1168.5 4667a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z"/>
+        <path id="7a5mi" d="M1107.36 4629.45a5.48 5.48 0 1 1 4.28 10.1 5.48 5.48 0 1 1-4.28-10.1z"/>
+        <path id="7a5mj" d="M1069.13 4601.27a3.5 3.5 0 1 1 2.73 6.45 3.5 3.5 0 1 1-2.73-6.45z"/>
+        <path id="7a5mk" d="M1032.13 4576.27a3.5 3.5 0 1 1 2.73 6.45 3.5 3.5 0 1 1-2.73-6.45z"/>
+        <clipPath id="7a5md">
+            <use fill="#fff" xlink:href="#7a5ma"/>
+        </clipPath>
+        <clipPath id="7a5me">
+            <use fill="#fff" xlink:href="#7a5mb"/>
+        </clipPath>
+        <mask id="7a5mg" width="2" height="2" x="-1" y="-1">
+            <path fill="#fff" d="M1158 4662h21v21h-21z"/>
+            <use xlink:href="#7a5mc"/>
+        </mask>
+        <filter id="7a5mf" width="57.6" height="56.4" x="1138.4" y="4643.6" filterUnits="userSpaceOnUse">
+            <feOffset dx="-2.6" dy="-1.4" in="SourceGraphic" result="FeOffset1060Out"/>
+            <feGaussianBlur in="FeOffset1060Out" result="FeGaussianBlur1061Out" stdDeviation="2.8 2.8"/>
+        </filter>
+    </defs>
+    <g>
+        <g transform="translate(-1028 -4574)">
+            <g opacity=".2">
+                <use fill="#fff" fill-opacity="0" stroke="#125ecf" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#7a5md&quot;)" xlink:href="#7a5ma"/>
+            </g>
+            <g opacity=".1">
+                <use fill="#fff" fill-opacity="0" stroke="#125ecf" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#7a5me&quot;)" xlink:href="#7a5mb"/>
+            </g>
+            <g>
+                <g filter="url(#7a5mf)">
+                    <use fill="none" stroke-opacity=".39" stroke-width="0" mask="url(&quot;#7a5mg&quot;)" xlink:href="#7a5mc"/>
+                    <use fill="#125ecf" fill-opacity=".39" xlink:href="#7a5mc"/>
+                </g>
+                <use fill="#4d90f4" xlink:href="#7a5mc"/>
+            </g>
+            <g>
+                <use fill="#fff" xlink:href="#7a5mh"/>
+            </g>
+        </g>
+        <g opacity=".3" transform="translate(-1028 -4574)">
+            <use fill="#068ff6" xlink:href="#7a5mi"/>
+        </g>
+        <g opacity=".15" transform="translate(-1028 -4574)">
+            <use fill="#068ff6" xlink:href="#7a5mj"/>
+        </g>
+        <g opacity=".05" transform="translate(-1028 -4574)">
+            <use fill="#068ff6" xlink:href="#7a5mk"/>
+        </g>
+    </g>
+</svg>

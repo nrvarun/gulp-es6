@@ -1,17 +1,22 @@
 doctype html
 html
-		include ./pug/base/head.pug
-		include ./pug/base/header.pug
-		body
-			main
+    include ./pug/base/head.pug
+    include ./pug/base/header.pug
+    body
+        main
+            include ./pug/layouts/banner.pug
+            include ./pug/layouts/why-factor.pug
+            
+            .pattern-wrapper
+                include ./img/patterns/why-factor-second-pattern.svg
+                include ./img/patterns/why-factor-last-pattern.svg
+            
+            include ./pug/layouts/why-use-factor.pug
+            include ./pug/layouts/factor-features.pug
+            
+            .pattern-wrapper
+                include ./img/patterns/features-pattern-2.svg
 
-					h2(data-aos="fade") Welcomes to Home Page
+        include ./pug/layouts/factor-contact.pug
 
-					form(data-parsley-validate)
-						input#date(type="text", name="date" data-parsley-trigger="blur" data-parsley-required data-parsley-error-message=" Type some value bugger")
-						input(type="submit")
-
-					ul.home-list.d-flex.flex-wrap.my-3
-
-			include ./pug/base/scripts.pug
-			script(src="./js/main.js")
+    include ./pug/base/scripts.pug

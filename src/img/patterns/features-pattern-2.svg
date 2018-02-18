@@ -1,0 +1,35 @@
+<svg class="features-pattern-svg2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="370" height="548" viewBox="0 0 370 548">
+    <defs>
+        <path class="pattern-big-circle" id="sis0a" d="M-87.5 5385.36c-65.77-17.63-104.86-84.97-87.33-150.42 17.54-65.45 85.07-104.22 150.84-86.6 65.76 17.62 104.86 84.97 87.33 150.42-17.54 65.45-85.07 104.22-150.84 86.6z"/>
+        <path class="pattern-big-rect" id="sis0b" d="M-99.02 5493.42l-107.7-93.86c-25.47-22.2-28.09-60.68-5.86-85.96l74.7-84.97c22.23-25.29 60.89-27.8 86.35-5.6l107.7 93.86c25.46 22.19 28.09 60.68 5.86 85.96l-74.7 84.97c-22.23 25.29-60.89 27.8-86.35 5.6z"/>
+        <path class="pattern-circle" id="sis0e" d="M-100.79 5688.09a10 10 0 1 1 5.18-19.32 10 10 0 0 1-5.18 19.32z"/>
+        <path class="pattern-circle" id="sis0f" d="M121.19 5359.1a8.5 8.5 0 1 1 4.4-16.42 8.5 8.5 0 0 1-4.4 16.42z"/>
+        <path class="pattern-circle" id="sis0g" d="M98.61 5547.68a5.5 5.5 0 1 1 2.85-10.62 5.5 5.5 0 0 1-2.85 10.62z"/>
+        <linearGradient class="pattern-big-rect" id="sis0c" x1="-74.88" x2="-75.68" y1="5508.55" y2="5207.89" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#0073ff"/>
+            <stop offset="1" stop-color="#07a8f7"/>
+        </linearGradient>
+        <clipPath id="sis0d">
+            <use fill="#fff" xlink:href="#sis0a"/>
+        </clipPath>
+    </defs>
+    <g>
+        <g transform="translate(236 -5143)">
+            <g opacity=".1">
+                <use fill="url(#sis0c)" xlink:href="#sis0b"/>
+            </g>
+            <g opacity=".1">
+                <use fill="#fff" fill-opacity="0" stroke="#07a8f7" stroke-miterlimit="50" stroke-width="60" clip-path="url(&quot;#sis0d&quot;)" xlink:href="#sis0a"/>
+            </g>
+            <g opacity=".2">
+                <use fill="#068ff6" xlink:href="#sis0e"/>
+            </g>
+        </g>
+        <g opacity=".2" transform="translate(236 -5143)">
+            <use fill="#068ff6" xlink:href="#sis0f"/>
+        </g>
+        <g opacity=".2" transform="translate(236 -5143)">
+            <use fill="#068ff6" xlink:href="#sis0g"/>
+        </g>
+    </g>
+</svg>

@@ -30,6 +30,8 @@ import merge          from 'merge-stream'
 import glob           from 'glob'
 import path           from 'path'
 
+//Code Linting
+import eslint         from 'gulp-eslint';
 
 browserSync.create()
 
@@ -61,6 +63,34 @@ const paths = {
   }
 }
 
+let additionalRules = {};
+try {
+  additionalRules = require('../.eslintrc.json').rules;
+} catch(e) {}
+try {
+  additionalRules = require('./.eslintrc.json').rules;
+} catch(e) {}
+
+// configuration
+const config = {
+  paths: [
+    './src/**/*.js',
+    // '**/*.jsx',
+    '!node_modules/**/*.js',
+    '!build/**/*.js',
+    '!docs/**/*.js',
+    '!example/**/*.js',
+    '!lib/**/*.js',
+    '!lib/**/*.jsx',
+    '!dist/*.js',
+  ],
+  rules: {
+    parser: 'babel-eslint',
+    extends: 'airbnb-base',
+    rules: additionalRules,
+  },
+};
+
 //Clean Dist Directory
 gulp.task('clean', [], function() {
   console.log("Clean all files in dist folder");
@@ -86,26 +116,14 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.css.dest))
     .pipe(browserSync.stream({match: '**/*.css'}))
-})
+});
 
-// // SASS
-// gulp.task('prod-sass', () => {
-//   return gulp.src(paths.css.source)
-//     .pipe(plumber({errorHandler: notify.onError({
-//         message: "<%= error.message %>",
-//         title: "CSS preprocessing"
-//       })}))
-//     .pipe(sourcemaps.init())
-//     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-//     .pipe(postcss([autoprefixer({browsers: ['last 10 version']})]))
-//     .pipe(purify(content, css, options, function (purifiedAndMinifiedResult) {
-//       console.log(purifiedAndMinifiedResult);
-//     }))
-//     .pipe(minifyCSS())
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest(paths.css.dest))
-//     .pipe(browserSync.stream({match: '**/*.css'}))
-// })
+gulp.task('eslint', function () {
+  return gulp.src('./src/js/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
 
 // PUG
 gulp.task('pug', () => {
@@ -192,11 +210,11 @@ gulp.task('serve', () => {
     })
 
     gulp.watch(paths.css.watch, ['sass'])
-    gulp.watch(paths.js.source, ['bundle-js'])
+    gulp.watch(paths.js.source, ['bundle-js','eslint'])
     gulp.watch(paths.pug.watch, ['pug'])
     //gulp.watch(paths.images.source, browserSync.reload)
 })
 
 // TASKS
 gulp.task('default', [ 'build', 'serve' ])
-gulp.task('build', [ 'pug', 'sass', 'bundle-js', 'images', 'fonts', 'js-vendor' ])
+gulp.task('build', [ 'pug', 'sass', 'eslint', 'bundle-js', 'images', 'fonts', 'js-vendor' ])

@@ -1,0 +1,127 @@
+.factor-footer {
+    position: relative;
+    z-index: 90;
+
+    &__copyright {
+        font-family: $proxima-regular;
+        font-size: 12px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.4);
+
+        @media (min-width: $screen-sm) {
+            font-size: 12px;    
+        }
+    }
+
+    &__logo {
+        width: 20px;
+        margin-right: 5px;
+        
+        @media (min-width: $screen-sm) {
+            width: 20px;
+        }
+    }
+
+    &__copy-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+        @media (min-width: $screen-sm) {
+            margin: 0;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 10px 0;
+
+        @media (min-width: $screen-sm) {
+            margin: 0;
+        }
+
+        &.social {
+            .factor-footer__nav-list-item {
+                margin-right: 30px;
+                
+                @media (min-width: $screen-sm) {
+                    margin-right: 15px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__nav-list-item {
+        margin-right: 10px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__nav-link {
+        &,
+        &:active,
+        &:hover,
+        &:focus {
+            color: rgba(255, 255, 255, 0.9);
+            font-family: $proxima-regular;
+            font-size: 12px;
+            text-transform: capitalize;
+            text-align: center;
+
+            @media (min-width: $screen-sm) {
+                font-size: 10px;
+            }
+            @media (min-width: $screen-md) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__nav-img {
+        width: 15px;
+        height: auto;
+    }
+
+    &__content-wrapper {
+        margin-bottom: 20px;
+
+        @media (min-width: $screen-sm) {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .factor-footer__nav-list {
+            @media (min-width: $screen-sm) {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    &__content-wrapper2 {
+        margin-bottom: 20px;
+
+        @media (min-width: $screen-sm) {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .factor-footer__nav-list {
+            @media (min-width: $screen-sm) {
+                margin-right: 10px;
+            }
+        }
+    }
+}

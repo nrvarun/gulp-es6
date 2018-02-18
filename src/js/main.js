@@ -1,6 +1,9 @@
-'use strict'
+//Website Wide File
 
-// Website wide scripts
-
-import './components/hello.js';
-import './components/firstModule.js';
+import './components/aos-init';
+import './components/banner-slider';
+import './components/factor-anims';
+import './components/form-validations';
+import './components/header-anim';
+import './components/pattern-anims';
+// import 'pattern-anims';
