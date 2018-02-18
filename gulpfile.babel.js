@@ -32,6 +32,10 @@ import path           from 'path'
 
 //Code Linting
 import eslint         from 'gulp-eslint';
+import reporter       from 'postcss-reporter';
+import syntax_scss    from 'postcss-scss';
+import stylelint      from 'stylelint';
+
 
 
 browserSync.create()
@@ -89,7 +93,27 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.css.dest))
     .pipe(browserSync.stream({match: '**/*.css'}))
-})
+});
+
+//SCSS Stylelint
+gulp.task("scss-lint", function() {
+
+  var processors = [
+    stylelint(),
+    reporter({
+      clearMessages: true,
+      throwError: true
+    })
+  ];
+
+  return gulp.src(
+      ['src/css/**/*.scss',
+      // Ignore linting vendor assets
+      // Useful if you have bower components
+      '!src/css/1-plugins/**/*.scss']
+    )
+    .pipe(postcss(processors, {syntax: syntax_scss}));
+});
 
 //Eslint
 gulp.task('eslint', function () {
@@ -183,7 +207,7 @@ gulp.task('serve', () => {
         port: 8000
     })
 
-    gulp.watch(paths.css.watch, ['sass'])
+    gulp.watch(paths.css.watch, ['sass', 'scss-lint'])
     gulp.watch(paths.js.source, ['bundle-js', 'eslint'])
     gulp.watch(paths.pug.watch, ['pug'])
     //gulp.watch(paths.images.source, browserSync.reload)
@@ -191,4 +215,4 @@ gulp.task('serve', () => {
 
 // TASKS
 gulp.task('default', [ 'build', 'serve'])
-gulp.task('build', [ 'pug', 'sass', 'eslint', 'bundle-js', 'images', 'fonts', 'js-vendor' ])
+gulp.task('build', [ 'pug', 'sass', 'scss-lint', 'eslint', 'bundle-js', 'images', 'fonts', 'js-vendor' ])
