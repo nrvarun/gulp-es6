@@ -1,6 +1,4 @@
-'use strict'
-
 // Website wide scripts
 
-import './components/hello.js';
-import './components/firstModule.js';
+import './components/hello';
+import './components/firstModule';

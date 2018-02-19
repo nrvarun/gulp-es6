@@ -217,6 +217,10 @@ ansi-escapes@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
 
+ansi-escapes@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-2.0.0.tgz#5bae52be424878dd9783e8910e3fc2922e83c81b"
+
 ansi-escapes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.0.0.tgz#ec3e8b4e9f8064fc02c3ac9b65f1c275bda8ef92"
@@ -5371,6 +5375,12 @@ lodash@~2.4.1:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.2.tgz#fadd834b9683073da179b3eae6d9c0d15053f73e"
 
+log-symbols@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
+  dependencies:
+    chalk "^1.0.0"
+
 log-symbols@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
@@ -6484,6 +6494,14 @@ portscanner@2.1.1:
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
+
+postcss-bem-linter@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-bem-linter/-/postcss-bem-linter-3.1.0.tgz#55352412fb481aad0d05148185a990734e1ca030"
+  dependencies:
+    minimatch "^3.0.3"
+    postcss "^6.0.6"
+    postcss-resolve-nested-selector "^0.1.1"
 
 postcss-html@^0.12.0:
   version "0.12.0"
@@ -8033,6 +8051,16 @@ stylelint-config-standard@^18.1.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-18.1.0.tgz#e4d977063f5bca77970033d2f76941c3cc19fd9c"
   dependencies:
     stylelint-config-recommended "^2.0.0"
+
+stylelint-formatter-pretty@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stylelint-formatter-pretty/-/stylelint-formatter-pretty-1.0.3.tgz#a6b43c3f3a13206bdfb777d0da8cefc6c76c36c3"
+  dependencies:
+    ansi-escapes "^2.0.0"
+    chalk "^1.1.3"
+    log-symbols "^1.0.2"
+    plur "^2.1.2"
+    string-width "^2.0.0"
 
 stylelint-scss@^2.3.0:
   version "2.3.0"

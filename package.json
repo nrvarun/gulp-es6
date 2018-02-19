@@ -30,6 +30,7 @@
     "gulp-eslint": "^4.0.2",
     "gulp-rimraf": "^0.2.1",
     "gulp-stylelint": "^6.0.0",
+    "postcss-bem-linter": "^3.1.0",
     "postcss-reporter": "^5.0.0",
     "postcss-scss": "^1.0.3",
     "postcss-uncss": "^0.16.1",
@@ -38,6 +39,7 @@
     "stylelint-config-recommended-scss": "^3.0.0",
     "stylelint-config-sass-guidelines": "^4.1.0",
     "stylelint-config-standard": "^18.1.0",
+    "stylelint-formatter-pretty": "^1.0.3",
     "stylelint-scss": "^2.3.0",
     "uncss": "^0.16.1"
   },
