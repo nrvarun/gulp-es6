@@ -27,8 +27,9 @@ import imagemin 		from 'gulp-imagemin';
 import clean 			from 'gulp-rimraf';
 import purify 			from 'gulp-purifycss';
 import merge 			from 'merge-stream';
-import glob 			from 'glob';
+import glob 			from 'glob-all';
 import path 			from 'path';
+import concat 			from 'gulp-concat';
 
 // Code Linting
 import eslint 			from 'gulp-eslint';
@@ -134,7 +135,8 @@ gulp.task('scss-lint', function () {
 // Eslint
 gulp.task('eslint', () =>
   gulp
-    .src('./src/js/**/*.js')
+    // .src('./src/js/**/*.js')
+    .src(['./src/js/**/*.js', '!./src/js/plugins/*'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError()),
@@ -173,8 +175,8 @@ gulp.task('pug', () =>
 );
 
 // ES6 Bundles generator
-gulp.task('bundle-js', () => {
-  const files = glob.sync('./src/js/*.js');
+gulp.task('bundle-js',['vendor-js'], () => {
+  const files = glob.sync(['./src/js/*.js', '!./src/js/plugins/*']);
   return merge(
     files.map(file =>
       browserify({
@@ -206,6 +208,14 @@ gulp.task('bundle-js', () => {
         .pipe(browserSync.stream()),
     ),
   );
+});
+
+//Vendor Files
+gulp.task('vendor-js', function () {
+	return gulp.src(['./src/js/plugins/jquery.min.js','./src/js/plugins/jquery.fullpage.min.js'])
+	.pipe(concat('vendors.min.js'))
+	.pipe(uglify())
+    .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('images', () =>
@@ -257,5 +267,5 @@ gulp.task('build', [
   'bundle-js',
   'images',
   'fonts',
-  'js-vendor',
+//   'js-vendor',
 ]);

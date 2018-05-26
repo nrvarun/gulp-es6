@@ -5,7 +5,7 @@ html
 		body
 			main
 
-					h2(data-aos="fade") Welcomes to Home Page
+					h2(data-aos="fade") 👷 Boilerplate with Gulp, ES6 ☝ & SCSS 🤓
 
 					form(data-parsley-validate)
 						input#date(type="text", name="date" data-parsley-trigger="blur" data-parsley-required data-parsley-error-message=" Type some value bugger")
@@ -13,5 +13,6 @@ html
 
 					ul.home-list.d-flex.flex-wrap.my-3
 
+			script(src="./js/vendors.min.js")
 			include ./pug/base/scripts.pug
 			script(src="./js/main.js")
