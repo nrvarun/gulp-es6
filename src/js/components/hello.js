@@ -1,35 +1,25 @@
-'use strict';
+// 'use strict';
 
 // require('jquery');
 
-$(document).ready(()=> {
+$(document).ready(() => {
   console.log('Hello');
 
   let i = 0;
 
-  setInterval(() => {
-    i++;
-    // console.log($('ul'));
-    insertElem();
-  }, 2000);
-
   const insertElem = () => {
-
-    // let list = document.querySelector('ul');
-    // var newListItem =  document.createElement('li');
-
-    // newListItem.classList.add('m-3')
-
-    if(i == 0 || i == 1){
+    if (i === 0 || i === 1) {
       $('.home-list').append(`<li class="mr-3">Hello ${i} time</li>`);
     }
     else {
       // newListItem.innerHTML = `Hello ${i} times`;
       $('.home-list').append(`<li class="mr-3">Hello ${i} times</li>`);
     }
-
     // list.appendChild(newListItem);
-
   };
 
-})
+  setInterval(() => {
+    i++;
+    insertElem();
+  }, 2000);
+});
